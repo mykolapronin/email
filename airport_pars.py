@@ -8,4 +8,3 @@ with open('airport.csv', mode='r', encoding='utf-8') as file:
         if list_of_airports[5] == 'UA':
             print(list_of_airports[2], list_of_airports[5])
 
-
