@@ -86,12 +86,60 @@ with sqlite3.connect(DB_PATH) as connection:
     # """
     #
     # cursor.executemany(query, students)
+    #
+    # query = """
+    #     SELECT *
+    #     FROM students
+    #     JOIN schools ON students.school_id = schools.id
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall())
+    # *(*I*((*(*(*(*(*(*(*(*(*(*(
 
-    query = """
-        SELECT *
-        FROM students
-        JOIN schools ON students.school_id = schools.id
-    """
-    result = cursor.execute(query)
-    pprint(result.fetchall())
+    # NEW HOMEWORK
 
+    # query = """
+    #     SELECT *
+    #     FROM students
+    #     LEFT JOIN schools
+    #     ON students.school_id = schools.id
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall())
+
+    # query = """
+    #     ALTER TABLE students
+    #     ADD COLUMN phone_number TEXT
+    #
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall())
+
+    # query = """
+    #     UPDATE students
+    #     SET
+    #         phone_number = 38099659418
+    #     WHERE id = 5
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall())
+
+
+    # query = """
+    #     DELETE
+    #     FROM students
+    #     WHERE students.id BETWEEN 2 AND 4
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall())
+
+    # query = """
+    #     SELECT *
+    #     FROM students
+    #     ORDER BY students.id DESC
+    #     LIMIT 3
+    #     OFFSET 2
+    #
+    # """
+    # result = cursor.execute(query)
+    # pprint(result.fetchall())
